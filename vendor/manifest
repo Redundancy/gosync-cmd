@@ -1,0 +1,24 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/Redundancy/go-sync",
+			"repository": "https://github.com/Redundancy/go-sync",
+			"revision": "aff5b3b10f5934554a1fcfdc089ca13830ec1f35",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/codegangsta/cli",
+			"repository": "https://github.com/codegangsta/cli",
+			"revision": "aca5b047ed14d17224157c3434ea93bf6cdaadee",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/petar/GoLLRB/llrb",
+			"repository": "https://github.com/petar/GoLLRB",
+			"revision": "53be0d36a84c2a886ca057d34b6aa4468df9ccb4",
+			"branch": "master",
+			"path": "/llrb"
+		}
+	]
+}
