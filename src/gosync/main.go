@@ -36,7 +36,7 @@ func main() {
 		cli.IntFlag{
 			Name:  "profilePort",
 			Value: 6060,
-			Usage: "The number of streams to use concurrently",
+			Usage: "Port to listen on.",
 		},
 	}
 
