@@ -13,11 +13,12 @@ In order to separate the library from the tool, and to bring proper vendoring to
 
 {{template "glide/install" .}}
 
-### go build
+### run/build
 
 ```sh
 go run *.go
 go build -o gosync-cmd *.go
+emd gen -out README.md
 ```
 
 # Usage
