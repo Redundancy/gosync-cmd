@@ -1,7 +1,7 @@
-/*
-gosync is a command-line implementation of the gosync package functionality, primarily as a demonstration of usage
-but supposed to be functional in itself.
-*/
+// Package gosync-cmd is a command-line implementation
+// of the gosync package functionality,
+// primarily as a demonstration of usage
+// but supposed to be functional in itself.
 package main
 
 import (
@@ -16,6 +16,7 @@ import (
 )
 
 const (
+	// DefaultBlockSize is ...
 	DefaultBlockSize = 8192
 	magicString      = "G0S9NC" // just to confirm the file type is used correctly
 	majorVersion     = uint16(0)

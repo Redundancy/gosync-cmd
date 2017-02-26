@@ -36,7 +36,13 @@ The index should be produced by "gosync build".
 	)
 }
 
-// Patch a file
+// Patch recreates the reference source file,
+// using an index and a local file that is believed to be similar.
+// The index should be produced by "gosync build".
+//
+// <reference index> is a .gosync file and may be a local, unc network path or http/https url
+// <reference source> is corresponding target and may be a local, unc network path or http/https url
+// <output> is optional. If not specified, the local file will be overwritten when done.
 func Patch(c *cli.Context) {
 	errorWrapper(c, func(c *cli.Context) error {
 
@@ -64,13 +70,15 @@ func Patch(c *cli.Context) {
 		}
 		defer indexReader.Close()
 
-		_, _, _, filesize, blocksize, e := readHeadersAndCheck(
+		// TODO why this err is ignored ?
+		_, _, _, filesize, blocksize, _ := readHeadersAndCheck(
 			indexReader,
 			magicString,
 			majorVersion,
 		)
 
-		index, checksumLookup, blockCount, err := readIndex(
+		// TODO why this err is ignored ?
+		index, checksumLookup, blockCount, _ := readIndex(
 			indexReader,
 			uint(blocksize),
 		)

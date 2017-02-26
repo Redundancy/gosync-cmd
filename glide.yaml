@@ -1,0 +1,11 @@
+package: github.com/mh-cbon/gosync-cmd
+import:
+- package: github.com/Redundancy/go-sync
+  subpackages:
+  - chunks
+  - comparer
+  - filechecksum
+  - index
+  - patcher
+- package: github.com/codegangsta/cli
+  version: ^1.19.1
