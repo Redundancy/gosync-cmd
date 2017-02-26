@@ -23,10 +23,10 @@ emd gen -out README.md
 
 # Usage
 
-{{cli "./go-sync" "-h"}}
-{{cli "./go-sync" "build" "-h"}}
-{{cli "./go-sync" "diff" "-h"}}
-{{cli "./go-sync" "patch" "-h"}}
+{{cli "./gosync-cmd" "-h"}}
+{{cli "./gosync-cmd" "build" "-h"}}
+{{cli "./gosync-cmd" "diff" "-h"}}
+{{cli "./gosync-cmd" "patch" "-h"}}
 
 ## Cli examples
 

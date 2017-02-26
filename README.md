@@ -27,16 +27,24 @@ go install
 ```
 
 
+### run/build
+
+```sh
+go run *.go
+go build -o gosync-cmd *.go
+emd gen -out README.md
+```
+
 # Usage
 
 
-__$ go-sync -h__
+__$ gosync-cmd -h__
 ```sh
 NAME:
    gosync - Build indexes, patches, patch files
 
 USAGE:
-   go-sync [global options] command [command options] [arguments...]
+   gosync-cmd [global options] command [command options] [arguments...]
 
 VERSION:
    0.2.1
@@ -54,25 +62,25 @@ GLOBAL OPTIONS:
    --version, -v        print the version
 ```
 
-__$ go-sync build -h__
+__$ gosync-cmd build -h__
 ```sh
 NAME:
-   go-sync build - build a .gosync file for a file
+   gosync-cmd build - build a .gosync file for a file
 
 USAGE:
-   go-sync build [command options] [arguments...]
+   gosync-cmd build [command options] [arguments...]
 
 OPTIONS:
    --blocksize value  The block size to use for the gosync file (default: 8192)
 ```
 
-__$ go-sync diff -h__
+__$ gosync-cmd diff -h__
 ```sh
 NAME:
-   go-sync diff - gosync diff <localfile> <reference.gosync>
+   gosync-cmd diff - gosync diff <localfile> <reference.gosync>
 
 USAGE:
-   go-sync diff [command options] [arguments...]
+   gosync-cmd diff [command options] [arguments...]
 
 DESCRIPTION:
    Compare a file with a reference index, and print statistics on the comparison and performance.
@@ -81,13 +89,13 @@ OPTIONS:
    -p value  The number of streams to use concurrently (default: 4)
 ```
 
-__$ go-sync patch -h__
+__$ gosync-cmd patch -h__
 ```sh
 NAME:
-   go-sync patch - gosync patch <localfile> <reference index> <reference source> [<output>]
+   gosync-cmd patch - gosync patch <localfile> <reference index> <reference source> [<output>]
 
 USAGE:
-   go-sync patch [command options] [arguments...]
+   gosync-cmd patch [command options] [arguments...]
 
 DESCRIPTION:
    Recreate the reference source file, using an index and a local file that is believed to be similar.
