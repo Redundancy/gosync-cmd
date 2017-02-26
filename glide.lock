@@ -1,0 +1,22 @@
+hash: 3197611f80e97df39d2e397018b4e84ffbdb801b7bed5e92dbbfc1fb09beb8d1
+updated: 2017-02-26T19:21:29.180464642+01:00
+imports:
+- name: github.com/codegangsta/cli
+  version: 0bdeddeeb0f650497d603c4ad7b20cfe685682f6
+- name: github.com/petar/GoLLRB
+  version: 53be0d36a84c2a886ca057d34b6aa4468df9ccb4
+  subpackages:
+  - llrb
+- name: github.com/Redundancy/go-sync
+  version: 8931874cad5cacc627b94fcbcb182460e174aeef
+  subpackages:
+  - blocksources
+  - chunks
+  - circularbuffer
+  - comparer
+  - filechecksum
+  - index
+  - patcher
+  - patcher/sequential
+  - rollsum
+testImports: []
