@@ -1,7 +1,7 @@
-/*
-gosync is a command-line implementation of the gosync package functionality, primarily as a demonstration of usage
-but supposed to be functional in itself.
-*/
+// Package gosync-cmd is a command-line implementation
+// of the gosync package functionality,
+// primarily as a demonstration of usage
+// but supposed to be functional in itself.
 package main
 
 import (
