@@ -16,6 +16,7 @@ import (
 )
 
 const (
+	// DefaultBlockSize is ...
 	DefaultBlockSize = 8192
 	magicString      = "G0S9NC" // just to confirm the file type is used correctly
 	majorVersion     = uint16(0)

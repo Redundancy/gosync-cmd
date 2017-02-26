@@ -1,3 +1,4 @@
+// Package gosync-cmd is a command-line tool based on gosync
 package main
 
 import (
@@ -29,6 +30,7 @@ func init() {
 	)
 }
 
+// Build builds a .gosync file for a file
 func Build(c *cli.Context) {
 	filename := c.Args()[0]
 	blocksize := uint32(c.Int("blocksize"))
@@ -48,7 +50,7 @@ func Build(c *cli.Context) {
 
 	s, _ := inputFile.Stat()
 	// TODO: Error?
-	file_size := s.Size()
+	fileSize := s.Size()
 
 	defer inputFile.Close()
 
@@ -67,12 +69,12 @@ func Build(c *cli.Context) {
 		outputFile,
 		magicString,
 		blocksize,
-		file_size,
+		fileSize,
 		[]uint16{majorVersion, minorVersion, patchVersion},
 	); err != nil {
 		fmt.Fprintf(
 			os.Stderr,
-			"Error getting file info: %v\n",
+			"Error getting file info: %q %v\n",
 			filename,
 			err,
 		)
@@ -86,7 +88,7 @@ func Build(c *cli.Context) {
 	if err != nil {
 		fmt.Fprintf(
 			os.Stderr,
-			"Error generating checksum: %v\n",
+			"Error generating checksum: %q %v\n",
 			filename,
 			err,
 		)
@@ -97,7 +99,7 @@ func Build(c *cli.Context) {
 	if err != nil {
 		fmt.Fprintf(
 			os.Stderr,
-			"Error getting file info: %v\n",
+			"Error getting file info: %q %v\n",
 			filename,
 			err,
 		)

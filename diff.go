@@ -29,6 +29,8 @@ func init() {
 	)
 }
 
+// Diff compares a file with a reference index,
+// and print statistics on the comparison and performance
 func Diff(c *cli.Context) {
 	localFilename := c.Args()[0]
 	referenceFilename := c.Args()[1]
@@ -80,20 +82,20 @@ func Diff(c *cli.Context) {
 		os.Exit(1)
 	}
 
-	num_matchers := int64(c.Int("p"))
+	numMatchers := int64(c.Int("p"))
 
-	localFile_size := fi.Size()
+	localFileSize := fi.Size()
 
 	// Don't split up small files
-	if localFile_size < 1024*1024 {
-		num_matchers = 1
+	if localFileSize < 1024*1024 {
+		numMatchers = 1
 	}
 
 	merger, compare := multithreadedMatching(
 		localFile,
 		index,
-		localFile_size,
-		num_matchers,
+		localFileSize,
+		numMatchers,
 		uint(blocksize),
 	)
 
